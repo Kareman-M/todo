@@ -1,0 +1,39 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+<link href="~/css/todo.css" rel="stylesheet" />
+<div class="todo-container">
+    <div class="status">
+        @*<h3>No atatus</h3>*@
+        <button id="add_btn"> +</button>
+        @foreach (var item in ViewBag.NotStarted)
+        {
+            <div class="todo" draggable="true">
+                <div class="todoHeader">
+                    @item.Name
+                    <span class="close">&times;</span>
+                </div>
+            <p class="todoDescription">@item.Description</p>
+            </div>
+        }
+    </div>
+
+
+    <div class="status">
+        <h3>No Strted</h3>
+    </div>
+
+
+    <div class="status">
+        <h3>In progress</h3>
+    </div>
+
+
+    <div class="status">
+        <h3>completed</h3>
+    </div>
+
+</div>
+<script src="~/js/todo.js"></script>

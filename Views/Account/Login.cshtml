@@ -1,0 +1,101 @@
+﻿@model todo.ViewModels.LoginViewModel;
+@{
+    ViewData["Title"] = "Login";
+    Layout = "~/Views/Shared/_AccountLayout.cshtml";
+}
+
+<!--<section class="vh-100">
+    <div class="container py-5 h-100">
+        <div class="row d-flex align-items-center justify-content-center h-100">
+            <div class="col-md-8 col-lg-7 col-xl-6">
+                <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.svg" class="img-fluid" alt="Phone image">
+            </div>
+            <div class="col-md-7 col-lg-5 col-xl-5 offset-xl-1">
+                <form method="post">
+                    <div asp-validation-summary="All" class="text-danger"></div>-->
+                    <!-- Email input -->
+                    <!--<div class="form-outline mb-4">
+                        <label class="form-label" for="form1Example13">Email address</label>
+                        <input type="email" asp-for="Email" class="form-control form-control-lg" />
+                        <span asp-validation-for="Email" class="text-danger"></span>
+                    </div>-->
+
+                    <!-- Password input -->
+                    <!--<div class="form-outline mb-4">
+                        <label class="form-label" asp-for="Password">Password</label>
+                        <input type="password" asp-for="Password" class="form-control form-control-lg" />
+                        <span asp-validation-for="Password" class="text-danger"></span>
+                    </div>
+
+                    <div class="d-flex justify-content-around align-items-center mb-4">-->
+                        <!-- Checkbox -->
+                        <!--<div class="form-check">
+                            <input class="form-check-input"
+                                   type="checkbox"
+                                   asp-for="RememberMe"
+                                   checked />
+                            <label class="form-check-label" asp-for="RememberMe">@Html.DisplayNameFor(m => m.RememberMe)</label>
+                        </div>
+                        <a di href="#!">Forgot password?</a>
+                    </div>-->
+
+                    <!-- Submit button -->
+                    <!--<button type="submit" class="btn btn-primary  btn-block" style="background-color: #aac7fa; padding:10px;">Sign in</button>
+
+                    <div class="divider d-flex align-items-center my-4">
+                        <p class="text-center fw-bold mx-3 mb-0 text-muted">OR</p>
+                    </div>
+
+                    <a class="btn btn-primary btn-lg btn-block" style="background-color: #3b5998" href="#!" role="button">
+                        <i class="fab fa-facebook-f me-2"></i>Continue with Facebook
+                    </a>
+                    <a class="btn btn-primary btn-lg btn-block" style="background-color: #55acee" href="#!" role="button">
+                        <i class="fab fa-twitter me-2"></i>Continue with Twitter
+                    </a>
+
+                </form>
+            </div>
+        </div>
+    </div>
+</section>-->
+
+<!-- Sing in  Form -->
+<section class="sign-in">
+    <div class="container">
+        <div class="signin-content">
+            <div class="signin-image">
+                <figure><img src="~/Images/signin-image.jpg" alt="sing up image"></figure>
+                <a href="./Account/Register" class="signup-image-link">Create an account</a>
+            </div>
+
+            <div class="signin-form">
+                <h2 class="form-title">Sign up</h2>
+                <form method="POST" class="register-form" >
+                    <div class="form-group">
+                        <label asp-for="Email"><i class="zmdi zmdi-account material-icons-name"></i></label>
+                        <input type="text" asp-for="Email" placeholder="Your Email" />
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Password"><i class="zmdi zmdi-lock"></i></label>
+                        <input type="password" asp-for="Password" placeholder="Password" />
+                    </div>
+                    <div class="form-group">
+                        <input type="checkbox" name="remember-me" id="remember-me" class="agree-term" />
+                        <label for="remember-me" class="label-agree-term"><span><span></span></span>Remember me</label>
+                    </div>
+                    <div class="form-group form-button">
+                        <input type="submit"  class="form-submit" value="Log in" />
+                    </div>
+                </form>
+                <div class="social-login">
+                    <span class="social-label">Or login with</span>
+                    <ul class="socials">
+                        <li><a href="#"><i class="display-flex-center zmdi zmdi-facebook"></i></a></li>
+                        <li><a href="#"><i class="display-flex-center zmdi zmdi-twitter"></i></a></li>
+                        <li><a href="#"><i class="display-flex-center zmdi zmdi-google"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

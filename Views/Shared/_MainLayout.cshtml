@@ -1,0 +1,89 @@
+﻿@*@if (User.Identity.IsAuthenticated)
+    {*@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>@ViewData["title"]</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="~/css/sidebar.css" rel="stylesheet" />
+</head>
+<body>
+
+    <div class="wrapper d-flex align-items-stretch">
+        <nav id="sidebar" class="active">
+            <h3><a href="index.html" class="logo">ToDo</a></h3>
+            <ul class="list-unstyled components mb-5">
+                <li class="active">
+                    <a href="#"><span class="fa fa-home"></span> Home</a>
+                </li>
+                <li>
+                    <a href="#"><span class="fa fa-user"></span> About</a>
+                </li>
+                <li>
+                    <a href="#"><span class="fa fa-calendar"></span> Calendar</a>
+                </li>
+                <li>
+                    <a href="#"><span class="fa fa-paper-plane"></span> Contacts</a>
+                </li>
+                <li>
+                    <a href=""><span class="fa fa fa-sign-out"></span> Sign Out</a>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Page Content  -->
+        <div id="content" class="p-4 p-md-5">
+
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container-fluid">
+
+                    <button type="button" id="sidebarCollapse" class="btn btn-primary">
+                        <i class="fa fa-bars"></i>
+                        <span class="sr-only">Toggle Menu</span>
+                    </button>
+                    <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <i class="fa fa-bars"></i>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <div class="container justify-content-center" style="margin-top: 6px;">
+                            <div class="row" style="justify-content: space-around;">
+                                <div class="col-md-8">
+                                    <div class="input-group mb-3">
+                                        <input type="text" class="form-control input-text"  style="outline:1px solid #7fc1ab" placeholder="Search ...." aria-label="Recipient's username" aria-describedby="basic-addon2">
+                                        <div class="input-group-append"> 
+                                        <button class="btn" style="border: 1px solid #7fc1ab;" type="button">
+                                            <i class="fa fa-search" style=" color: #7fc1ab;"></i>
+                                        </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+
+            
+            @RenderBody()
+        </div>
+    </div>
+
+    <script src="~/js/jquery.min.js"></script>
+    <script src="~/js/popper.js"></script>
+    <script src="~/js/bootstrap.min.js"></script>
+    <script src="~/js/sidebar.js"></script>
+</body>
+</html>
+@*}
+    else
+    {
+
+    }*@
+
+
